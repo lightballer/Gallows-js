@@ -1,11 +1,15 @@
 <script >
+
 const inGame = true;
 let letter = '';
 let counter = 5;
 const outputWord = [];
 
 
-const words = ['АРТЕМ', 'МАКБУК'];
+const words = [
+    'артем', 
+    'макбук',
+];
 const indexOfRandomWord = wordsArray => wordsArray[Math.floor(Math.random()*wordsArray.length)];
 const generateWord = indexOfRandomWord(words);
 const randomWord = generateWord.split('');
@@ -18,7 +22,7 @@ alert('Aloha! You have ' + counter + ' attempts');
 
 while(inGame) {
     letter = prompt('Write down the letter: ');
-    
+    letter.toLowerCase;
     if(letter.length == 1 && typeof letter == 'string') {
         if(randomWord.includes(letter) == false) --counter;
         for(let i = 0; i < randomWord.length; i++) {
@@ -37,4 +41,5 @@ while(inGame) {
         } 
     alert(outputWord.join('') + ' ' + counter + ' attempts left');
 }
+
 </script>
